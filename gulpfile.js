@@ -13,6 +13,9 @@ gulp.task('sass', function () {
         sourcemap: true,
         style: 'compresed'
     }))
+    .on('error', function (err) {
+        console.error('Error!', err.message);
+    })
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css'))
     .pipe(livereload());

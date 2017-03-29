@@ -1,12 +1,4 @@
 <?php
-function yourprofile_scripts_and_styles() {
-  wp_enqueue_style( 'bootstrap_4.0.0_alpha_css', get_template_directory_uri().'/assets/css/lib/bootstrap.min.css', array(), '4.0.0' );
-  wp_enqueue_style( 'style', get_template_directory_uri().'/assets/css/site.css', array('bootstrap_4.0.0_alpha_css'), '1.0.0' );
-
-  wp_deregister_script('jquery');
-  wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/lib/jquery-3.2.0.min.js', array( ), '3.2.0', true);
-  wp_enqueue_script( 'tether', get_template_directory_uri() . '/assets/js/lib/tether.min.js', array('jquery'), '1.3.3', true);
-  wp_enqueue_script( 'bootstrap_4.0.0_alpha_js', get_template_directory_uri() . '/assets/js/lib/bootstrap.min.js', array('jquery','tether'), '4.0.0', true);
-}
-add_action( 'wp_enqueue_scripts', 'yourprofile_scripts_and_styles' );
+include_once('includes/bootstrap4-nav-walker.php');
+include_once('includes/theme_setup.php');
 ?>

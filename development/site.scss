@@ -1,5 +1,103 @@
+@import 'variables';
+
 body {
-    background: silver;
-    height: 30px;
-    font-size: 15px;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+
+
+/* LINKS */
+a {
+    color: $white;
+    transition: color .15s, border .15s, background .15s, opacity .15s, transform .15s, visibility 0s linear .15s;
+    &:visited {
+
+    }
+    &:hover {
+        color: darken($white, 10%);
+    }
+    &:active {
+
+    }
+    &:focus {
+        color: darken($white, 10%);
+    }
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+/* MENU */
+.navbar {
+    background-color: $nav-menu-background-color;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-size: 1.25rem;
+
+    .dropdown-menu li {  // Too make bootstrap 4 nav-walker work correct
+        width: 100%;
+        margin-left: 0 !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            text-shadow: none;
+        }
+    }
+
+    .navbar-nav {
+        margin-left: auto; // Make the menu links go right
+
+        .nav-link {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    // Menu botton for smaller devices fix
+    .navbar-toggler {
+        border-color: rgba(255,255,255,.1);
+        color: rgba(255,255,255,.9);
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
+        }
+    }
+}
+
+.home section:nth-child(even) {
+    background: #ccc;
+}
+
+
+.example {
+    height: 100px;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  .container {
+    border-top: 1px solid #ccc;
+  }
 }
