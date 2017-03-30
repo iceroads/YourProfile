@@ -37,7 +37,7 @@ wp_head();
                 <div class="col">
                     <div class="text-center">
                         <img style="width: 300px; height: 200px;" src="http://placehold.it/300x200">
-                        <h1>Utvecklare med koll på Wordpress baserade sajter</h1>
+                        <h1><?php echo __('Utvecklare med koll på Wordpress baserade sajter','yourprofile'); ?></h1>
                         <p class="big">Söker du en professionell webbutvecklare som kan ta hand om din Wordpress site?</p>
                         <button class="btn">Besök mina tjänster</button>
                     </div>
@@ -80,9 +80,9 @@ wp_head();
             <div class="container">    
                 <div class="row">
                     <div class="col">
-                        <div class="example">
-                            kolumn1
-                        </div>
+                        <blockquote style="background-color: #333; color: white;" class="text-center">
+                            Hejsan hoppsan
+                        </blockquote>
                     </div>
                     <div class="col">
                         <div class="example">
