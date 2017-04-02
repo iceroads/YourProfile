@@ -1,30 +1,36 @@
 @import 'variables';
 
 body {
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 18px;
+    font-size: 1.125rem;
 }
 
-.home section {
-    padding: 15px;
+html {
+  position: relative;
+  min-height: 100%;
 }
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
 
 
 /* LINKS */
 a {
-    color: $white;
+    color: $link-text-color;
     transition: color .15s, border .15s, background .15s, opacity .15s, transform .15s, visibility 0s linear .15s;
     &:visited {
 
     }
     &:hover {
-        color: darken($white, 10%);
+        color: darken($link-text-color, 10%);
     }
     &:active {
 
     }
     &:focus {
-        color: darken($white, 10%);
+        color: darken($link-text-color, 10%);
     }
 }
 
@@ -32,8 +38,27 @@ img {
     height: auto;
     width: 100%;
 }
+/*
+* Button
+*/
+.btn.btn-primary {
+    color: $white;
+    background-color: $blueish;
+    border-color: $blueish;
+}
 
-/* MENU */
+/*
+* Sections first page
+*/
+.home section {
+    padding: 4em 0;
+    border-top: 1px solid #ccc;
+}
+
+
+/*
+* MENU 
+*/
 .navbar {
     background-color: $nav-menu-background-color;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
@@ -74,32 +99,120 @@ img {
     }
 }
 
-.home section:nth-child(even) {
-    background: #ccc;
+/*
+* Your promotion section first page
+*/
+.home .second-section {
+    .item {
+        .img-wrap {
+            min-height: 120px;
+            max-height: 120px;
+            margin-bottom: 10px;
+            img {
+                width: auto;
+                max-height: 120px;
+                vertical-align: middle;
+            }
+        }
+        .btn {
+            margin-top: 10px;
+        }
+    }
 }
 
+/*
+* Header Section first page
+*/
+.home .first-section {
+    &.header {
+        background: $orange url('../images/header_bg.jpg') center center;
+        background-size: cover;
+        color: $white;
+        min-height: 20em;
+        border-top: 1px solid #ccc;
+        position: relative;
+    }
+    .text-center {
+        margin-top: 3em;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+        line-height: 1.4em;
+        h1 {
+            line-height: 1.2em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            margin-top: 25px;
+        }
+    }
 
-.example {
-    height: 100px;
-    width: 100%;
-    border: 1px solid #000;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+/*
+* Feedback comments on homepage
+*/
+.home .third-section {
+    background: $light-grey;
 }
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+.home .feedback blockquote {
+    padding: 1em;
+    background-color: $white;
+    color: inherit;
+    font-style: italic;
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        background: inherit;
+        border: inherit;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: auto;
+        bottom: -10px;
+        left: 20px;
+        z-index: 1;
+        ms-transform: rotate(45deg);
+        webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    &:after {
+        content: '';
+        display: block;
+        background: inherit;
+        border: none;
+        position: absolute;
+        top: auto;
+        bottom: 0px;
+        left: 2px;
+        z-index: 2;
+        width: 100px;
+        height: 20px;
+    }
 }
+.home .feedback-writer {
+    padding-top: 10px;
+    img {
+        height: 60px;
+        width: 60px;
+        ms-border-radius: 50%;
+        webkit-border-radius: 50%;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+    author {
+        font-size: 1.2em;
+    }
+}
+
+/*
+* Footer
+*/
 .site-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
   .container {
     border-top: 1px solid #ccc;
   }
