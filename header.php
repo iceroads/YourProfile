@@ -7,6 +7,11 @@
     <?php
     wp_head();
     ?>
+    <style>
+        .home .first-section.header {
+            background-image: url(<?php echo get_theme_mod('showcase_img', get_bloginfo('template_url').'/assets/images/header_bg.jpg'); ?>);
+        }
+    </style>
 </head>
 <body <?php body_class(); ?> >
 

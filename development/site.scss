@@ -128,8 +128,10 @@ img {
 */
 .home .first-section {
     &.header {
-        background: $orange url('../images/header_bg.jpg') center center;
+        background: $orange;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
         color: $white;
         min-height: 20em;
         border-top: 1px solid #ccc;

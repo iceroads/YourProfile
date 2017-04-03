@@ -6729,8 +6729,10 @@ img {
 * Header Section first page
 */
 .home .first-section.header {
-  background: #F7882F url("../images/header_bg.jpg") center center;
+  background: #F7882F;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: #fff;
   min-height: 20em;
   border-top: 1px solid #ccc;

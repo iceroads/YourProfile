@@ -7,9 +7,9 @@ get_header();
             <div class="row">
                 <div class="col">
                     <div class="text-center">
-                        <h1><?php echo __('Utvecklare med koll på Wordpress baserade sajter','yourprofile'); ?></h1>
-                        <p class="big">Söker du en professionell webbutvecklare som kan ta hand om din Wordpress site?</p>
-                        <button class="btn btn-lg btn-primary">Besök mina tjänster</button>
+                        <h1><?php echo get_theme_mod('showcase_heading', 'Developer with an eye for Wordpress sites'); ?></h1>
+                        <p class="big"><?php echo get_theme_mod('showcase_text', 'Do you seek an professional developer that can take care of your Wordpress site?'); ?></p>
+                        <a href="<?php echo get_theme_mod('btn_url', 'http://example.com'); ?>" class="btn btn-lg btn-primary"><?php echo get_theme_mod('btn_text', 'View my Services'); ?></a>
                     </div>
                 </div>
             </div>
