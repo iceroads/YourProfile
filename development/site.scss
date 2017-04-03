@@ -1,3 +1,4 @@
+@import 'libscss/bootstrap/bootstrap';
 @import 'variables';
 
 body {
@@ -13,7 +14,6 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
-
 
 
 /* LINKS */
@@ -104,6 +104,9 @@ img {
 */
 .home .second-section {
     .item {
+        @media (max-width: 768px) {
+            margin: 20px 0;
+        }
         .img-wrap {
             min-height: 120px;
             max-height: 120px;
@@ -152,41 +155,51 @@ img {
 */
 .home .third-section {
     background: $light-grey;
-}
-.home .feedback blockquote {
-    padding: 1em;
-    background-color: $white;
-    color: inherit;
-    font-style: italic;
-    position: relative;
-    &:before {
-        content: '';
-        display: block;
-        background: inherit;
-        border: inherit;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: auto;
-        bottom: -10px;
-        left: 20px;
-        z-index: 1;
-        ms-transform: rotate(45deg);
-        webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
+    .row [class*='col-'] {
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
-    &:after {
-        content: '';
-        display: block;
-        background: inherit;
-        border: none;
-        position: absolute;
-        top: auto;
-        bottom: 0px;
-        left: 2px;
-        z-index: 2;
-        width: 100px;
-        height: 20px;
+}
+.home .feedback {
+    blockquote {
+        padding: 1em;
+        background-color: $white;
+        color: inherit;
+        font-style: italic;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            background: inherit;
+            border: inherit;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: auto;
+            bottom: -10px;
+            left: 20px;
+            z-index: 1;
+            ms-transform: rotate(45deg);
+            webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        &:after {
+            content: '';
+            display: block;
+            background: inherit;
+            border: none;
+            position: absolute;
+            top: auto;
+            bottom: 0px;
+            left: 2px;
+            z-index: 2;
+            width: 100px;
+            height: 20px;
+        }
     }
 }
 .home .feedback-writer {
@@ -201,6 +214,20 @@ img {
     }
     author {
         font-size: 1.2em;
+    }
+}
+
+/*
+* Article
+ */
+.home .fourth-section {
+    .row [class*='col-'] {
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 

@@ -3,8 +3,7 @@
 * Scripts and CSS 
 **/
 function yourprofile_scripts_and_styles() {
-    wp_enqueue_style( 'bootstrap_4.0.0_alpha_css', get_template_directory_uri().'/assets/css/lib/bootstrap.min.css', array(), '4.0.0' );
-    wp_enqueue_style( 'style', get_template_directory_uri().'/assets/css/site.css', array('bootstrap_4.0.0_alpha_css'), '1.0.0' );
+    wp_enqueue_style( 'style', get_template_directory_uri().'/assets/css/site.css', array(), '1.0.0' );
 
     wp_deregister_script('jquery');
     wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/js/lib/jquery-3.2.0.min.js', array( ), '3.2.0', true);
@@ -20,6 +19,6 @@ add_action( 'wp_enqueue_scripts', 'yourprofile_scripts_and_styles' );
 **/
 function yourprofile_theme_setup() {
     /* Menu registration */
-    register_nav_menu('headmenu', __('Primary Header Menu', 'ypwt2017'));
+    register_nav_menu('headmenu', __('Primary Header Menu', 'yourprofile'));
 }
 add_action( 'after_setup_theme', 'yourprofile_theme_setup' );
