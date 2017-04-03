@@ -23,3 +23,8 @@ function yourprofile_theme_setup() {
 }
 add_action( 'after_setup_theme', 'yourprofile_theme_setup' );
 
+/**
+* Thumbnails
+**/
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'testimonial-thumbnail', 60, 60, ['center','center']);

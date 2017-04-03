@@ -73,9 +73,9 @@ img {
         &:last-child {
             border-bottom: none;
         }
-
         a {
             text-shadow: none;
+            color: $white;
         }
     }
 
@@ -85,6 +85,17 @@ img {
         .nav-link {
             padding-right: 1rem;
             padding-left: 1rem;
+        }
+    }
+
+    // Menu link color
+    a {
+        color: $white;
+        &:hover {
+            color: darken($white, 10%);
+        }
+        &:focus {
+            color: darken($white, 10%);
         }
     }
 

@@ -1,4 +1,4 @@
 <?php
 get_header();
-echo "search.php";
+echo "category.php";
 get_footer();
