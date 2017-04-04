@@ -27,6 +27,9 @@ gulp.task('js', function () {
     .pipe(jshint.reporter('fail'))
     .pipe(concat('theme.js'))
     .pipe(gulp.dest('assets/js'))
+    .on('error', function (err) {
+        console.error('Error!', err.message);
+    })
     .pipe(livereload());
 });
 

@@ -33,6 +33,7 @@
             'walker'         => new bootstrap_4_walker_nav_menu()
         ) );
         ?>
+        <?php get_template_part('navbar-search'); ?>
     </div>
 </nav>
 <div id="wrap">

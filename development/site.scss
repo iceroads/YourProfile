@@ -1,3 +1,4 @@
+@import 'libscss/fontawsome/scss/font-awesome';
 @import 'libscss/bootstrap/bootstrap';
 @import 'variables';
 
@@ -15,6 +16,9 @@ body {
   margin-bottom: 60px;
 }
 
+.hidden {
+    display: none;
+}
 
 /* LINKS */
 a {
