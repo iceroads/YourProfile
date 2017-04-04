@@ -22,8 +22,8 @@ function yourprofile_testimonial_custom_post_type() {
 
 	// Portfolio
 	$labels = [ 
-		'name'	=> __('Portfolio','yourprofile'), 
-		'singular_name' => __('Portfolio','yourprofile') 
+		'name'	=> __('Service','yourprofile'), 
+		'singular_name' => __('Services','yourprofile') 
 	];
 	$args = [
 		'labels'      => $labels,
@@ -39,6 +39,6 @@ function yourprofile_testimonial_custom_post_type() {
 		'exclude_from_search'	=> false,
 		'menu_icon'	=>	'dashicons-pressthis'
 	];
-	register_post_type('portfolio', $args);
+	register_post_type('Services', $args);
 }
 add_action('init', 'yourprofile_testimonial_custom_post_type');

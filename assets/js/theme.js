@@ -1,20 +1,22 @@
 $(function() {
-	$("#searchsubmit").click(function(e) {
+	$("#searchsubmit").on("click", function(e) {
 		var search = $("#searchform");
-		if( $("#searchform").is(":visible") ) {
+		if( $("#searchform").is(":visible") && $('.search-container .form-control').val() != "" ) {
 			$("#searchform").submit();
 		} else {
-			search.toggle();
+			search.animate({width:'toggle'},350);
 		}
 	});
 
 	$(document).mouseup(function (e) {
-	    var container = $("#searchform");
+	    var searchfrom = $(".search-container");
 
-	    if (!container.is(e.target) // if the target of the click isn't the container...
-	        && container.has(e.target).length === 0) // ... nor a descendant of the container
+	    if (!searchfrom.is(e.target)
+	        && searchfrom.has(e.target).length === 0)
 	    {
-	        container.hide();
+	    	if( $("#searchform").is(":visible") ) {	
+	        	$("#searchform").animate({width:'toggle'},350);
+	    	}
 	    }
 	});
 });

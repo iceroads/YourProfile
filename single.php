@@ -8,10 +8,11 @@ get_header();
 			if( have_posts() ):
 				while( have_posts() ) : the_post();
 					?>
+						<div class="alignright"><?php the_post_thumbnail('article-thumbnail'); ?></div>
 						<h1><?php echo the_title(); ?></h1>
-						<cite><?php echo the_date(); ?>
+						<meta><?php echo the_date(); ?>
 							<?php echo the_category(' '); ?>
-						</cite>
+						</meta>
 					<?php
 						the_content();
 				endwhile;

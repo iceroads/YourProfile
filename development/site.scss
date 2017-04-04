@@ -5,6 +5,7 @@
 body {
     font-size: 18px;
     font-size: 1.125rem;
+    color: #333;
 }
 
 html {
@@ -19,6 +20,29 @@ body {
 .hidden {
     display: none;
 }
+
+
+/**
+ *  Page header
+ */
+.page-header {
+    background-color: $light-grey;
+    color: $white;
+    padding: 3em 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+/**
+ *  Wordpress CSS fix. images.
+ */
+img {
+    &.alignright { float: right; margin: 0 0 1em 1em; }
+    &.alignleft { float: left; margin: 0 1em 1em 0; }
+    &.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+}
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 /* LINKS */
 a {
@@ -40,7 +64,7 @@ a {
 
 img {
     height: auto;
-    width: 100%;
+    max-width: 100%;
 }
 /*
 * Button
@@ -235,7 +259,7 @@ img {
 }
 
 /*
-* Article
+* Article Front Page
  */
 .home .fourth-section {
     .row [class*='col-'] {
@@ -244,6 +268,31 @@ img {
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+    .latest-article-title {
+        margin-bottom: 2em;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+/**
+ * Articles Page
+ */
+article {
+    img {
+        float: right;
+    }
+    h3 {
+    }
+    .meta {
+        font-size: 0.8em;
+        margin-bottom: 1.5em;
+        a {
+            padding: 2px 4px;
+            background-color: $blueish;
+            color: $white;
+            border-radius: 5px;
         }
     }
 }
@@ -260,4 +309,31 @@ img {
   .container {
     border-top: 1px solid #ccc;
   }
+}
+
+/*
+Navbar search container
+ */
+.search-container {
+    form {
+        display: none;
+        position: absolute;
+        right: 70px;
+        @media (max-width: 992px) {
+            position: static;
+            right: 0;
+        }
+    }
+    .btn-outline-info {
+        color: $orange;
+        border-color: $orange;
+        &:hover, &:active {
+            color: $white;
+            background-color: $yellow;
+
+        }
+        &:focus {
+            box-shadow: 0 0 0 2px rgba(247, 136, 47, 0.5);
+        }
+    }
 }

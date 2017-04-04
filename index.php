@@ -1,7 +1,9 @@
 <?php
 get_header();
 ?>
-      
+        <!-- 
+                FRONT SHOWCASE
+        -->
         <section class="first-section header">
         <div class="container">
             <div class="row">
@@ -15,7 +17,9 @@ get_header();
             </div>
         </div>     
         </section>
-
+        <!-- 
+                FRONT PROMOTION
+        -->
         <section class="second-section">
             <div class="container">
                 <div class="row">
@@ -52,66 +56,73 @@ get_header();
                 </div>
             </div>
         </section>
-                    <?php
-                        $args = [
-                            'post_type' =>  'testimonial',
-                            'posts_per_page' =>  4
-                        ];
-                        $testimonial_query = new WP_Query($args);
-                        if( $testimonial_query->have_posts() ):
+        <!-- 
+                FRONT TESTIMONIAL
+        -->
+        <?php
+
+        $args = [
+            'post_type' =>  'testimonial',
+            'posts_per_page' =>  4
+        ];
+        $testimonial_query = new WP_Query($args);
+        if( $testimonial_query->have_posts() ):      
+            ?>
+            <section class="third-section">
+                <div class="container">    
+                    <div class="row">
+                        <?php
+                        while( $testimonial_query->have_posts() ):
+                            $testimonial_query->the_post();
                             ?>
-        <section class="third-section">
-            <div class="container">    
-                <div class="row">
-                            <?php
-                            while( $testimonial_query->have_posts() ):
-                                $testimonial_query->the_post();
-                                ?>
-                    <div class="col-md-6">
-                        <div class="feedback"> 
-                            <blockquote>
-                                <?php the_content(); ?>
-                            </blockquote>
-                            <div class="feedback-writer">
-                                <?php echo the_post_thumbnail( 'testimonial-thumbnail' );  ?>
-                                <author> <?php echo the_title(); ?> </author>
+                            <div class="col-md-6">
+                                <div class="feedback"> 
+                                    <blockquote>
+                                    <?php the_content(); ?>
+                                    </blockquote>
+                                    <div class="feedback-writer">
+                                        <?php echo the_post_thumbnail( 'testimonial-thumbnail' );  ?>
+                                        <author> <?php echo the_title(); ?> </author>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                                <?php
-                            endwhile;
-                            ?>
-                </div>
-            </div>
-        </section>
                             <?php
-                        endif;
-                    ?>
-
-
-
+                        endwhile;
+                        ?>
+                    </div>
+                </div>
+            </section>
+            <?php
+            wp_reset_postdata();
+        endif;
+        ?>
+        <!-- 
+                FRONT LATEST ARTICLE
+        -->
         <section class="fourth-section archive">
             <div class="container">    
                 <div class="row">
-                    <div class="col-sm-12">    
-                        <h2><?php echo __('Latest posts','yourprofile'); ?></h2>
+                    <div class="col-sm-12">
+                        <h2 class="latest-article-title"><?php echo __('Latest articles','yourprofile'); ?></h2>
                     </div>
                     <?php
                         if ( have_posts() ) :
                             while ( have_posts() ) : the_post();
                                 ?>
                                 <div class="col-md-4">
-                                    <a href="<?php echo the_permalink(); ?>">
-                                    <?php
-                                        // Have post thumbnail else post default image
-                                        if( has_post_thumbnail() ):
-                                            echo '<img src="'.the_post_thumbnail().'">';
-                                        else:
-                                            echo '<img src="http://placehold.it/300x210/333333">';
-                                        endif;
-                                    ?>
-                                    </a>
-                                    <a href="<?php echo the_permalink(); ?>"> <h4><?php echo the_title(); ?></h4> </a>
+                                    <div class="text-center">
+                                        <a href="<?php echo the_permalink(); ?>">
+                                        <?php
+                                            // Have post thumbnail else post default image
+                                            if( has_post_thumbnail() ):
+                                                echo the_post_thumbnail('latest-article-thumbnail');
+                                            else:
+                                                echo '<img src="http://placehold.it/300x210/333333">';
+                                            endif;
+                                        ?>
+                                        </a>
+                                        <a href="<?php echo the_permalink(); ?>"> <h4><?php echo the_title(); ?></h4> </a>
+                                    </div>
                                 </div>
                                 <?php
                             endwhile;

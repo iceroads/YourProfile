@@ -2,7 +2,7 @@
 get_header();
 
 while ( have_posts() ) : the_post();
-	get_template_part( 'templates/page/content', 'page' );
+echo get_page_template();
 endwhile;
 
 ?>

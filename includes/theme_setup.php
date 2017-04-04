@@ -29,3 +29,32 @@ add_action( 'after_setup_theme', 'yourprofile_theme_setup' );
 **/
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'testimonial-thumbnail', 60, 60, ['center','center']);
+add_image_size( 'latest-article-thumbnail', 250, 140, ['center','center']);
+add_image_size( 'article-thumbnail', 324, 324);
+
+/**
+ * Front page query tweak
+ */
+function yourprofile_custom_query( $query ) {
+if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', 3 );
+        $query->set( 'cat', -9 );
+    }
+}
+add_action( 'pre_get_posts', 'yourprofile_custom_query' );
+
+/**
+ * Excerpt changes
+ */
+function yourprofile_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'yourprofile_custom_excerpt_length' );
+
+function yourprofile_excerpt_more( $more ) {
+    return sprintf( '<p class="read-more"><a href="%1$s">%2$s</a></p>',
+            get_permalink( get_the_ID() ),
+            __( 'Read More &gt;', 'yourprofile' )
+    );
+}
+add_filter( 'excerpt_more', 'yourprofile_excerpt_more' );

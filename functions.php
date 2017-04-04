@@ -4,7 +4,10 @@ include_once('includes/theme_setup.php');
 include_once('includes/customize.php');
 include_once('includes/post-types.php');
 
-function my_theme_load_theme_textdomain() {
+/**
+ * Load translation for theme
+ */
+function yourprofile_load_theme_textdomain() {
     load_theme_textdomain( 'yourprofile', get_template_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'my_theme_load_theme_textdomain' );
+add_action( 'after_setup_theme', 'yourprofile_load_theme_textdomain' );
