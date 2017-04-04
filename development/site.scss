@@ -283,17 +283,15 @@ article {
     img {
         float: right;
     }
-    h3 {
-    }
-    .meta {
-        font-size: 0.8em;
-        margin-bottom: 1.5em;
-        a {
-            padding: 2px 4px;
-            background-color: $blueish;
-            color: $white;
-            border-radius: 5px;
-        }
+}
+.meta {
+    font-size: 0.8em;
+    margin-bottom: 1.5em;
+    a {
+        padding: 2px 4px;
+        background-color: $blueish;
+        color: $white;
+        border-radius: 5px;
     }
 }
 

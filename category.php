@@ -6,10 +6,14 @@ if( have_posts() ):
 		?>
 		<div class="container">
 		            <div class="row justify-content-md-center">
-		                <div class="col-md-8">
+		                <div class="col-md-9">
 		                    <article>
-		                        <?php the_post_thumbnail('article-thumbnail'); ?>
-		                        <h3><?php echo the_title(); ?></h3>
+		                        <a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail('article-thumbnail'); ?></a>
+		                        <a href="<?php echo the_permalink(); ?>"><h3><?php echo the_title(); ?></h3></a>
+		                        <div class="meta">
+		                            <?php the_time('j F, Y'); ?>
+		                            <?php the_category(' '); ?>
+		                        </div>
 		                        <?php the_excerpt(); ?>
 		                    </article>
 		                </div>

@@ -10,9 +10,9 @@ get_header();
 					?>
 						<div class="alignright"><?php the_post_thumbnail('article-thumbnail'); ?></div>
 						<h1><?php echo the_title(); ?></h1>
-						<meta><?php echo the_date(); ?>
+						<div class="meta"><?php echo the_date(); ?>
 							<?php echo the_category(' '); ?>
-						</meta>
+						</div>
 					<?php
 						the_content();
 				endwhile;
