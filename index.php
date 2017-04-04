@@ -92,7 +92,7 @@ get_header();
             <div class="container">    
                 <div class="row">
                     <div class="col-sm-12">    
-                        <h2><?php __('Latest posts','yourprofile'); ?></h2>
+                        <h2><?php echo __('Latest posts','yourprofile'); ?></h2>
                     </div>
                     <?php
                         if ( have_posts() ) :
