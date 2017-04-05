@@ -12,10 +12,10 @@ get_header();
                         <h1><?php echo get_theme_mod('showcase_heading', __('Developer with an eye for Wordpress sites','yourprofile')); ?></h1>
                         <p class="big"><?php echo get_theme_mod('showcase_text', __('Do you seek an professional developer that can take care of your Wordpress site?','yourprofile')); ?></p>
                         <a href="<?php echo get_theme_mod('btn_url', 'http://example.com'); ?>" class="btn btn-lg btn-primary"><?php echo get_theme_mod('btn_text', __('View my services','yourprofile')); ?></a>
-                    </div>
-                </div>
-            </div>
-        </div>     
+                    </div><!-- //.text-center -->
+                </div><!-- //.col -->
+            </div><!-- //.row -->
+        </div><!-- //.container -->  
         </section>
         <!-- 
                 FRONT PROMOTION
@@ -31,8 +31,8 @@ get_header();
                             <h3><?php echo get_theme_mod( 'promo_title1', __('Clean Code','yourprofile') ); ?></h3>
                             <p><?php echo get_theme_mod( 'promo_text1', __('With more than 7 years of experience of coding I know how to make your website professional','yourprofile') ); ?></p>
                             <a href="<?php echo get_theme_mod( 'promo_btn_url1', '#' ); ?>" class="btn btn-primary"><?php echo get_theme_mod( 'promo_btn_text1', __('Services','yourprofile') ); ?></a>
-                        </div>
-                    </div>
+                        </div><!-- //.text-center .item -->
+                    </div><!-- //.col-md-4 -->
                     <div class="col-md-4">
                         <div class="text-center item">
                             <div class="img-wrap">
@@ -51,10 +51,10 @@ get_header();
                             <h3><?php echo get_theme_mod( 'promo_title3', __('Optimizing','yourprofile') ); ?></h3>
                             <p><?php echo get_theme_mod( 'promo_text3', __('I know how to optimize your site and make it super fast! Read more about my optimizing','yourprofile') ); ?></p>
                             <a href="<?php echo get_theme_mod( 'promo_btn_url3', '#' ); ?>" class="btn btn-primary"><?php echo get_theme_mod( 'promo_btn_text3', __('Get a quicker site','yourprofile') ); ?></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </div><!-- //.text-center .item -->
+                    </div><!-- //.col-md-4 -->
+                </div><!-- //.row -->
+            </div><!-- //.container -->
         </section>
         <!-- 
                 FRONT TESTIMONIAL

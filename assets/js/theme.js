@@ -5,6 +5,7 @@ $(function() {
 			$("#searchform").submit();
 		} else {
 			search.animate({width:'toggle'},350);
+			$("#searchforminput").focus();
 		}
 	});
 
