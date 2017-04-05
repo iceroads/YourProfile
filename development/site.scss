@@ -1,6 +1,7 @@
 @import 'libscss/fontawsome/scss/font-awesome';
 @import 'libscss/bootstrap/bootstrap';
 @import 'variables';
+@import 'services-page';
 
 body {
     font-size: 18px;
@@ -33,7 +34,7 @@ body {
 }
 
 /**
- *  Wordpress CSS fix. images.
+ *  Wordpress CSS fix. images in posts justify.
  */
 img {
     &.alignright { float: right; margin: 0 0 1em 1em; }

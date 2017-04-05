@@ -1,0 +1,22 @@
+// Sass for 
+.service-page {
+	.page-header {
+		margin-bottom: 1em;
+	}
+	.service-item-image {
+		text-align: center;
+		padding-bottom: 1em;
+	}
+	.service-item-title {
+		text-align: center;
+		padding: 1em;
+	}
+	.service-item-text {
+		text-align: justify;
+		padding: 1em;
+	}
+	.border-break {
+		border-bottom: 1px solid #ccc;
+		margin: 1em 0;
+	}
+}

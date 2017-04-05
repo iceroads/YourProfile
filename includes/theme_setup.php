@@ -33,7 +33,7 @@ add_image_size( 'latest-article-thumbnail', 250, 140, ['center','center']);
 add_image_size( 'article-thumbnail', 324, 324);
 
 /**
- * Front page query tweak
+ * Front page query to take away portfolio category * This need to be fix to name instead of id number.
  */
 function yourprofile_custom_query( $query ) {
 if ( $query->is_home() && $query->is_main_query() ) {
@@ -42,6 +42,18 @@ if ( $query->is_home() && $query->is_main_query() ) {
     }
 }
 add_action( 'pre_get_posts', 'yourprofile_custom_query' );
+
+/**
+ * add my custom post types to body class
+ */
+function yourprofile_add_body_classes( $classes ) {
+    global $post;
+    if( $post->post_type === 'services') {
+        $classes[] = 'service-page';
+    }
+    return $classes;
+}
+add_filter('body_class', 'yourprofile_add_body_classes');
 
 /**
  * Excerpt changes
