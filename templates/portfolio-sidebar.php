@@ -1,4 +1,4 @@
-<?php /* Template Name: Portfolio */ 
+<?php /* Template Name: Portfolio With Sidebar */ 
 get_header();
 ?>
 <div class="page-header">
@@ -17,7 +17,15 @@ get_header();
 		</div><!-- // .row -->
 	</div><!-- // .container -->
 </div><!-- // .page-header -->
-<hr>
+
+<?php
+/////////////////
+// WIDGET AREA //
+/////////////////
+if( is_active_sidebar( 'portfolio-sidebar' ) ) {
+	get_sidebar('portfolio');
+}
+?>
 
 <?php
 get_template_part( 'templates/page/content', 'portfolio' );

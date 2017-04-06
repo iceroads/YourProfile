@@ -31,6 +31,8 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'testimonial-thumbnail', 60, 60, ['center','center']);
 add_image_size( 'latest-article-thumbnail', 250, 140, ['center','center']);
 add_image_size( 'article-thumbnail', 324, 324);
+add_image_size( 'service-thumbnail', 400, 250);
+
 
 /**
  * Front page query to take away portfolio category * This need to be fix to name instead of id number.
@@ -48,7 +50,7 @@ add_action( 'pre_get_posts', 'yourprofile_custom_query' );
  */
 function yourprofile_add_body_classes( $classes ) {
     global $post;
-    if( $post->post_type === 'services') {
+    if( @$post->post_type === 'services') {
         $classes[] = 'service-page';
     }
     return $classes;
@@ -70,3 +72,32 @@ function yourprofile_excerpt_more( $more ) {
     );
 }
 add_filter( 'excerpt_more', 'yourprofile_excerpt_more' );
+
+/**
+ * Shortcode registration
+ */
+function yourprofile_shortcode_header_text($attr, $content) {
+    if( $attr && array_key_exists('class', $attr) ) {
+        $class = $attr["class"];
+        return '<span class="'.$class.'">'.$content.'</span>';
+    }
+    return $content;
+}
+add_shortcode( 'headerText', 'yourprofile_shortcode_header_text' );
+
+/**
+ * Exclude pages from search
+ */
+function yourprofile_exclude_pages_from_search($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+
+add_filter('pre_get_posts','yourprofile_exclude_pages_from_search');
+
+/**
+ * Activate shortcode in widgets
+ */
+add_filter('widget_text','do_shortcode');

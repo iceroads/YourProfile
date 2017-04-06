@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "Yourprofile\n"
 "POT-Creation-Date: "
-"2017-03-29 11:56+0200\n"
+"2017-04-06 16:28+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -44,7 +44,8 @@ msgstr ""
 "_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "Language: en_US\n"
-"X-Generator: Poedit 2.0\n"
+"X-Generator: Poedit "
+"2.0\n"
 "X-Poedit-"
 "SearchPath-0: .\n"
 "X-Poedit-"
@@ -59,3 +60,279 @@ msgstr ""
 "X-Poedit-"
 "SearchPathExcluded-3: "
 "package.json\n"
+
+#: 404.php:8
+msgid "Error 404"
+msgstr ""
+
+#: 404.php:9
+msgid ""
+"The page you are "
+"looking for does not "
+"exist!"
+msgstr ""
+
+#: 404.php:10
+msgid ""
+"Take my back to start!"
+msgstr ""
+
+#: archive-services.php:8
+#: includes/customize.php:129
+#: includes/post-types.php:26
+#: index.php:33
+msgid "Services"
+msgstr ""
+
+#: archive-services.php:9
+msgid ""
+"This is the services i "
+"can give you"
+msgstr ""
+
+#: includes/customize.php:6
+msgid "Frontpage Showcase"
+msgstr ""
+
+#: includes/customize.php:7
+msgid ""
+"Options for showcase"
+msgstr ""
+
+#: includes/customize.php:16
+msgid ""
+"Head showcase image"
+msgstr ""
+
+#: includes/customize.php:23
+#: index.php:12
+msgid ""
+"Developer with an eye "
+"for Wordpress sites"
+msgstr ""
+
+#: includes/customize.php:27
+msgid "Head title text"
+msgstr ""
+
+#: includes/customize.php:33
+#: index.php:13
+msgid ""
+"Do you seek an "
+"professional developer "
+"that can take care of "
+"your Wordpress site?"
+msgstr ""
+
+#: includes/customize.php:37
+msgid "Under header title"
+msgstr ""
+
+#: includes/customize.php:43
+#: includes/customize.php:120
+#: includes/customize.php:167
+#: includes/customize.php:214
+msgid ""
+"http://wordpress.com"
+msgstr ""
+
+#: includes/customize.php:47
+#: includes/customize.php:124
+#: includes/customize.php:171
+#: includes/customize.php:218
+msgid "Button URL"
+msgstr ""
+
+#: includes/customize.php:53
+#: index.php:14
+msgid "View my services"
+msgstr ""
+
+#: includes/customize.php:57
+#: includes/customize.php:133
+#: includes/customize.php:180
+#: includes/customize.php:227
+msgid "Button text"
+msgstr ""
+
+#: includes/customize.php:64
+msgid "Frontpage Promo"
+msgstr ""
+
+#: includes/customize.php:65
+msgid ""
+"This is a description "
+"of this panel"
+msgstr ""
+
+#: includes/customize.php:70
+msgid "Promo 1"
+msgstr ""
+
+#: includes/customize.php:71
+msgid ""
+"Options for Promo 1"
+msgstr ""
+
+#: includes/customize.php:77
+msgid "Promo 2"
+msgstr ""
+
+#: includes/customize.php:78
+msgid ""
+"Options for Promo 2"
+msgstr ""
+
+#: includes/customize.php:84
+msgid "Promo 3"
+msgstr ""
+
+#: includes/customize.php:85
+msgid ""
+"Options for Promo 3"
+msgstr ""
+
+#: includes/customize.php:96
+#: includes/customize.php:143
+#: includes/customize.php:190
+msgid "Promo image"
+msgstr ""
+
+#: includes/customize.php:102
+#: index.php:31
+msgid "Clean Code"
+msgstr ""
+
+#: includes/customize.php:106
+#: includes/customize.php:153
+#: includes/customize.php:200
+msgid "Headline"
+msgstr ""
+
+#: includes/customize.php:111
+#: index.php:32
+msgid ""
+"With more than 7 years "
+"of experience of coding "
+"I know how to make your "
+"website professional"
+msgstr ""
+
+#: includes/customize.php:115
+#: includes/customize.php:162
+#: includes/customize.php:209
+msgid "Paragraph"
+msgstr ""
+
+#: includes/customize.php:149
+#: index.php:41
+msgid ""
+"Functions & Plugins"
+msgstr ""
+
+#: includes/customize.php:158
+#: index.php:42
+msgid ""
+"Do you miss a function "
+"or have an plugin "
+"stopped working for "
+"you? Contact me to "
+"solve it quick!"
+msgstr ""
+
+#: includes/customize.php:176
+#: index.php:43
+msgid "Contact me"
+msgstr ""
+
+#: includes/customize.php:196
+#: index.php:51
+msgid "Optimizing"
+msgstr ""
+
+#: includes/customize.php:205
+#: index.php:52
+msgid ""
+"I know how to optimize "
+"your site and make it "
+"super fast! Read more "
+"about my optimizing"
+msgstr ""
+
+#: includes/customize.php:223
+#: index.php:53
+msgid "Get a quicker site"
+msgstr ""
+
+#: includes/post-types.php:5
+msgid "Testimonials"
+msgstr ""
+
+#: includes/post-types.php:6
+msgid "Testimonial"
+msgstr ""
+
+#: includes/post-types.php:25
+msgid "Service"
+msgstr ""
+
+#: includes/theme_setup.php:23
+msgid ""
+"Primary Header Menu"
+msgstr ""
+
+#: includes/theme_setup.php:71
+msgid "Read More &gt;"
+msgstr ""
+
+#: includes/theme_sidebars.php:4
+msgid "Portfolio Sidebar"
+msgstr ""
+
+#: includes/theme_sidebars.php:13
+msgid "Contact Footer Map"
+msgstr ""
+
+#: index.php:105
+msgid "Latest articles"
+msgstr ""
+
+#: navbar-search.php:9
+msgid "Search..."
+msgstr ""
+
+#: navbar-search.php:12
+msgctxt "Search"
+msgid "Search"
+msgstr ""
+
+#: search.php:8
+msgid "Search page"
+msgstr ""
+
+#: search.php:10
+#, php-format
+msgid ""
+"Searching for ... <i>"
+"%s</i> </p>"
+msgstr ""
+
+#: search.php:38
+msgid ""
+"Sorry. We could not "
+"find any posts that "
+"matches. Please try "
+"again =("
+msgstr ""
+
+#: templates/page/content-articles.php:31
+msgid ""
+"Sorry. No articles have "
+"been wroten yet"
+msgstr ""
+
+#: templates/page/content-portfolio.php:27
+msgid ""
+"Sorry. No portfolio "
+"have been wroten yet"
+msgstr ""

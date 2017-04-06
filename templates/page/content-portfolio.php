@@ -1,8 +1,8 @@
 <?php
 
 $args = [
-    'post_type' =>  'post',
-    'cat'       =>  '9'
+    'post_type'     =>  'post',
+    'category_name' =>  'portfolio'
 ];
 
 $articles_query = new WP_Query($args);
@@ -26,4 +26,3 @@ if( $articles_query->have_posts() ):
 else:
     echo __('Sorry. No portfolio have been wroten yet','yourprofile');
 endif;
-?>

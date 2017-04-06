@@ -60,16 +60,15 @@ get_header();
                 FRONT TESTIMONIAL
         -->
         <?php
-
         $args = [
             'post_type' =>  'testimonial',
             'posts_per_page' =>  4
         ];
         $testimonial_query = new WP_Query($args);
-        if( $testimonial_query->have_posts() ):      
+        if( $testimonial_query->have_posts() ):
             ?>
             <section class="third-section">
-                <div class="container">    
+                <div class="container">
                     <div class="row">
                         <?php
                         while( $testimonial_query->have_posts() ):

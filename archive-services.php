@@ -6,6 +6,7 @@ get_header();
 		<div class="row justify-content-md-center">
 			<div class="col-md-9">
 				<h1><?php _e('Services','yourprofile'); ?></h1>
+				<?php echo do_shortcode('[headerText class="pageheadertext"]'.__("This is the services i can give you","yourprofile").'[/headerText]'); ?>
 			</div>
 		</div>
 	</div>
@@ -20,8 +21,8 @@ get_header();
 						while( have_posts() ): the_post();
 							?>
 							<div class="col-md-6">
-								<div class="service-item-image">
-									<?php the_post_thumbnail(); ?>
+								<div class="service-item-image align-middle">
+									<?php the_post_thumbnail('service-thumbnail'); ?>
 								</div>
 								<div class="service-item-title">
 									<h3><?php the_title(); ?></h3>
