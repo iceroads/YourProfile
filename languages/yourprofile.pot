@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: "
 "Yourprofile\n"
 "POT-Creation-Date: "
-"2017-04-06 16:28+0200\n"
+"2017-04-06 20:51+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your "
 "Name <you@example.com>\n"
@@ -61,20 +61,20 @@ msgstr ""
 "SearchPathExcluded-3: "
 "package.json\n"
 
-#: 404.php:8
+#: 404.php:9
 msgid "Error 404"
 msgstr ""
 
-#: 404.php:9
+#: 404.php:10
 msgid ""
 "The page you are "
 "looking for does not "
 "exist!"
 msgstr ""
 
-#: 404.php:10
+#: 404.php:11
 msgid ""
-"Take my back to start!"
+"Take me back to start!"
 msgstr ""
 
 #: archive-services.php:8
@@ -302,7 +302,6 @@ msgid "Search..."
 msgstr ""
 
 #: navbar-search.php:12
-msgctxt "Search"
 msgid "Search"
 msgstr ""
 

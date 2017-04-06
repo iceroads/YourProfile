@@ -1,13 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald:400,700');
 @import 'libscss/fontawsome/scss/font-awesome';
 @import 'libscss/bootstrap/bootstrap';
+@import 'typography';
 @import 'variables';
 @import 'services-page';
-
-body {
-    font-size: 18px;
-    font-size: 1.125rem;
-    color: #333;
-}
 
 html {
   position: relative;
